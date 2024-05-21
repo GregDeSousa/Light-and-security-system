@@ -15,6 +15,7 @@ This project provides a web-based control panel to manage GPIO pins on a Raspber
 - Raspberry Pi with Raspbian OS installed
 - Apache or any other web server with PHP support
 - GPIO utility (`gpio` command-line tool)
+- Raspicam module
 
 ### Steps
 
@@ -44,16 +45,21 @@ This project provides a web-based control panel to manage GPIO pins on a Raspber
 
 ## Usage
 
-1. **Access the Web Interface:**
+1. Start a webstream using the Raspicam module and a uv4l server.
+    ```
+   $sudo uv4l -nopreview --auto-video_nr --driver raspicam --encoding mjpeg --width 640 --height 480 --framerate 20 --server-option '--port=8080' --server-option '--max-queued-connections=30' --server-option '--max-streams=25' --server-option '--max-threads=29'
+    ```
+
+3. **Access the Web Interface:**
     Open a web browser and navigate to your Raspberry Pi's IP address:
     ```
-    http://<your-raspberry-pi-ip>/raspberry-pi-web-control-panel/
+    http://<your-raspberry-pi-ip>
     ```
 
-2. **Toggle the GPIO Pin:**
+4. **Toggle the GPIO Pin:**
     Use the main switch on the webpage to turn the GPIO pin on or off. The status will be displayed on the page.
 
-3. **View Live Feed:**
+5. **View Live Feed:**
     The live video feed from the camera connected to the Raspberry Pi is available under the "Live feed" section.
 
 ## Files
