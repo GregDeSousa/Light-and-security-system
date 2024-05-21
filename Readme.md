@@ -7,7 +7,6 @@ This project provides a web-based control panel to manage GPIO pins on a Raspber
 - [Installation](#installation)
 - [Usage](#usage)
 - [Files](#files)
-- [License](#license)
 
 ## Installation
 
@@ -28,11 +27,6 @@ This project provides a web-based control panel to manage GPIO pins on a Raspber
 2. **Install Apache and PHP:**
     ```bash
     sudo apt-get install apache2 php libapache2-mod-php
-    ```
-
-3. **Install WiringPi:**
-    ```bash
-    sudo apt-get install wiringpi
     ```
 
 4. **Clone the Repository:**
