@@ -14,12 +14,6 @@
     <section class="Header">
         <nav>
             <a href="index.html"><img src="images/logo.png"></a>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="">Schedule</a></li>
-                    <li><a href="">Advanced</a></li>
-                </ul>
-            </div>
         </nav>
         <div class="colomn">
             <div class="main-switch">
@@ -51,6 +45,7 @@
                 <h1>Live feed</h1>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="http://10.0.0.122:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
+                    <!-- Replace IP address with your Raspberyy Pi's local IP address -->
                 </div>
             </div>
 
@@ -86,7 +81,7 @@
 
                     },
                     error: function () {
-                        alert('it broke');
+                        alert('Server issue');
                     },
                 });
 
