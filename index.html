@@ -30,71 +30,20 @@
                         <span class="slider"></span>
                     </label>
                 </form>
-                <?php
-                $checkbox = intval($_POST['checkbox_name']);
-                shell_exec("/usr/local/bin/gpio -g mode 17 out");
-                if($checkbox==1)
-                {
-                echo "Light is on";
-                shell_exec("/usr/local/bin/gpio -g write 17 1");
-                }
-                else
-                {
-                echo "Light is off";
-                shell_exec("/usr/local/bin/gpio -g write 17 0");
-                }
-                ?>
 
 
             </div>
             <div class="main-feed">
                 <h1>Live feed</h1>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="http://10.0.0.122:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
+                    <iframe class="embed-responsive-item" src="http://10.0.0.100:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
                     <!-- Replace IP address with your Raspberyy Pi's local IP address -->
                 </div>
             </div>
 
         </div>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-        document.getElementByID("feed").width = 1000;
-        function lights() {
-            var toggle = document.getElementById('switch1');
-            if (toggle.checked) {
-                toggle.value = "1";
-                $.ajax({
-                    type: "POST",
-                    url: 'index.php',
-                    data: { checkbox_name: $('input:checkbox:checked').val() }, //--> send value of checkbox
-                    success: function (data) {
-
-                    },
-                    error: function () {
-                        alert('Incorrect IP address or Raspberry Pi server not setup');
-                    },
-                });
-
-                console.log(toggle.value);
-            } else {
-                toggle.value = "0";
-                $.ajax({
-                    type: "POST",
-                    url: 'index.php',
-                    data: { checkbox_name: $('input:checkbox:checked').val() }, //--> send value of checkbox
-                    success: function (data) {
-
-                    },
-                    error: function () {
-                        alert('Incorrect IP address or Raspberry Pi server not setup');
-                    },
-                });
-
-                console.log(toggle.value);
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
