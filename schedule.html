@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Panel</title>
@@ -12,19 +12,19 @@
 </head>
 <body>
     <section class="Header">
-    <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col s12 m3"></div>
                 <div class="col s12 m6">
                     <h3>Light Schedule</h3>
                     <form>
                         <div class="input-field">
-                            <input type="text" id="time" class="Stimepicker">
+                            <input type="text" id="time" class="Stimepicker" onchange="times()">
                             <label for="time">Set start time</label>
                         </div>
                         
                         <div class="input-field">
-                            <input type="text" id="time2" class="Etimepicker">
+                            <input type="text" id="time2" class="Etimepicker" onchange="times()">
                             <label for="time2">Set end time</label>
                         </div>
                     </form>
@@ -32,30 +32,18 @@
                 <div class="col s12 m3"></div>
                 
                 <div class="time-switch">
-                    <form name="toggleLights" action="index.php" method="post">
+                    <form name="toggleTime">
                         <label class="switch">
-                            <input class="checkboxS" type="checkbox" name="checkbox_name" id="switch1" value="1" onchange="lights()"></input>
+                            <input class="checkboxS" type="checkbox" name="checkbox_name" id="switch1" value="1">
                             <span class="slider"></span>
                         </label>
                     </form>
-                    <h1 class="pp">Schedule control</h1>
                 </div>
             </div>
-    </div>
-</section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
-    </script>
+        </div>
+    </section>
 
-    <script>
-        const timer1 = document.querySelector('.Stimepicker');
-        M.Timepicker.init(timer1,{});
-
-        const timer2 = document.querySelector('.Etimepicker');
-        M.Timepicker.init(timer2,{});
-    </script>
-
+    <script src="schedule.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
-
 </html>
