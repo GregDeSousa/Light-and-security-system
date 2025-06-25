@@ -23,26 +23,42 @@
         </nav>
         <div class="colomn">
             <div class="main-switch">
-                <h1>Main Terminal</h1>
-                <form name="toggleLights" action="index.php" method="post">
+                <h1>Toggle Lights</h1>
+                <form name="toggleLights" >
                     <label class="switch">
-                        <input class="checkboxS" type="checkbox" name="checkbox_name" id="switch1" value="1" onchange="lights()"></input>
+                        <input class="checkboxS" type="checkbox" name="checkbox_1" id="LightSwitch" value="1" onchange="lights()"></input>
                         <span class="slider"></span>
                     </label>
                 </form>
+                <h1>Smart Lighting</h1>
+                <form name="toggleLightEntry" >
+                    <label class="switch">
+                        <input class="checkboxS" type="checkbox" name="checkbox_2" id="EntryToggle" value="1" onchange="autolights()"></input>
+                        <span class="slider"></span>
+                    </label>
+                </form>
+
+                <h1>Door Status</h1>
+                <form name="DoorStatus" >
+                    <div class="door-status">
+                        <p id="door-status">Open</p>
+                    </div>
+                </form>
+
 
 
             </div>
             <div class="main-feed">
                 <h1>Live feed</h1>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="http://10.0.0.100:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
+                    <iframe class="embed-responsive-item" src="http://10.0.0.101:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
                     <!-- Replace IP address with your Raspberyy Pi's local IP address -->
                 </div>
             </div>
 
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2.3.0/dist/socket.io.js"></script>
     <script src="script.js"></script>
 
 </body>

@@ -132,4 +132,22 @@ input:checked + .slider::before {
     transform: translateX(295px);
 }
 
+.door-status{
+    position: relative;
+    cursor: pointer;
+    justify-self: center;
+    width: 200px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #E22013;
+    border-radius: 85px;
 
+    /* New additions */
+    text-align: center;
+    line-height: 30px; /* same as height for vertical centering */
+    color: white; /* optional: better text contrast */
+    overflow: hidden;
+}
