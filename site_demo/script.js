@@ -107,6 +107,43 @@ function autolights() {
     });
 }
 
+
+function uploadAudio() {
+    const fileInput = document.getElementById("audio-upload");
+    const formData = new FormData();
+    formData.append("audio", fileInput.files[0]);
+
+    fetch("http://10.0.0.101:5000/upload-audio", {
+        method: "POST",
+        body: formData
+    }).then(res => res.text()).then(msg => console.log(msg));
+}
+
+
+// navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+//     const recorder = new MediaRecorder(stream);
+//     let chunks = [];
+
+//     recorder.ondataavailable = e => chunks.push(e.data);
+//     recorder.onstop = () => {
+//         const blob = new Blob(chunks, { type: 'audio/webm' });
+//         const formData = new FormData();
+//         formData.append("audio", blob, "recording.webm");
+
+//         fetch("http://<pi-ip>:5000/upload-audio", {
+//             method: "POST",
+//             body: formData
+//         });
+
+//         chunks = [];
+//     };
+
+//     recorder.start();
+
+//     setTimeout(() => recorder.stop(), 5000); // record 5 seconds
+// });
+
+
 const socket = io("http://10.0.0.101:5000");
 socket.on("connect", () => {
     console.log("Connected to Flask-SocketIO server");
