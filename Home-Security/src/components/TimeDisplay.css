@@ -1,0 +1,17 @@
+.time-container {
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+.time {
+  font-size: 3rem;
+  font-weight:bolder;
+}
+.date {
+  font-size: 1.2rem;
+  color: white; /* gray-300 */
+  opacity: 1;
+  margin-top: -0.5em;
+  margin-bottom: 1.1em;
+  font-weight: 280;
+
+}

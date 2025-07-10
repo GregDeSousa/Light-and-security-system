@@ -1,0 +1,22 @@
+.StatusBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 33.8em;
+    height: 6em;
+ background-color: rgba(192, 192, 192, 0.2); /* black with 20% opacity */
+    border-radius: 13px;
+    margin-top: 4em;
+}
+
+.StatusIndicator-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.3em;
+    padding-bottom: 0;
+    padding-right: 0.7em;
+    padding-left: 1em;
+}
