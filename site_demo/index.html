@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="http://fonts.gooleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
 
@@ -45,13 +46,17 @@
                     </div>
                 </form>
 
+                <form name = "Audio upload">
+                <input type="file" id="audio-upload" accept="audio/*">
+                <button onclick="uploadAudio()">Play Audio</button>
+                </form>
 
 
             </div>
             <div class="main-feed">
                 <h1>Live feed</h1>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="http://10.0.0.101:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
+                    <iframe class="embed-responsive-item" src="http://10.0.0.133:8080/stream" allowfullscreen id="feed" width="640" height="480"></iframe>
                     <!-- Replace IP address with your Raspberyy Pi's local IP address -->
                 </div>
             </div>

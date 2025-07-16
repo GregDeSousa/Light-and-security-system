@@ -1,0 +1,18 @@
+.visualizer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.2);
+    opacity: 0.5;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    width: 16em;
+    height: 4em;
+    border: 0;
+    border-radius: 89px;
+    margin-bottom: 1em;
+}
+/* .voice-visualizer__canvas-container{
+    width: 100px;
+    height: 40px;
+} */
