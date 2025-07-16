@@ -1,12 +1,13 @@
 .LiveFeed{
     position: relative;
     width: 640px;
-    height: 440px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(192, 192, 192, 0.2);
     border-radius: 20px;
+    margin-bottom: 2em;
 }
 
 iframe{
