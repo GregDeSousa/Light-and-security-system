@@ -32,9 +32,7 @@ const RecordingButton = () => {
     onEndAudioPlayback: () => {
       console.log("🛑 Playback ended");
     },
-    onErrorPlayingAudio: (error) => {
-      console.error("❌ Error playing audio:", error);
-    },
+
     shouldHandleBeforeUnload: false, // optional, defaults to true
   });
   const {
